@@ -12,12 +12,12 @@ class BaseViewController: UIViewController {
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // 設定 NavigationBar
         setNavigationBarStyle()
         
         self.view.backgroundColor = TDefind.s_backGroundColor
-   
+        
         
     }
     
@@ -39,7 +39,7 @@ class BaseViewController: UIViewController {
         
     }
     
-
+    
 }
 extension String{
     func replacing(str: String)-> String{

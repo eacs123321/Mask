@@ -17,6 +17,8 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var sentenceLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var okBtn: UIButton!
     @IBOutlet weak var apiActivityIndicator: UIActivityIndicatorView!
     
     
@@ -70,6 +72,7 @@ class MainViewController: BaseViewController {
         
         //註冊Cell
         tableview.register(cellNib, forCellReuseIdentifier: cellID)
+        tableview.accessibilityLabel = "pharmacyData"
 
     }
     
@@ -80,7 +83,9 @@ class MainViewController: BaseViewController {
                         style: .plain,
                         target: self,
                         action: #selector(popPickView))
+        self.navigationItem.rightBarButtonItem?.accessibilityLabel = "filter"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "全區", style: .plain, target: self, action: #selector(fetchDataFromDatabase))
+        self.navigationItem.leftBarButtonItem?.accessibilityLabel = "Allarea"
                         
                         
     }
@@ -226,12 +231,10 @@ class MainViewController: BaseViewController {
                 let oneDaySentence = doc.xpath("/html/body/div[@class='wrapper']/article/div/div/div[@class='rwdfix']").first!.text
                 let str1 = oneDaySentence?.replacingOccurrences(of: "\n", with: "")
                 let str2 = str1?.replacingOccurrences(of: "\t", with: "")
-                var str3 = str2?.trimmingCharacters(in: .whitespacesAndNewlines)
+                let str3 = str2?.trimmingCharacters(in: .whitespacesAndNewlines)
                 let startIndex = str3?.startIndex
-                let endIndex = str3?.endIndex
                 let subIndex:String.Index = str3!.index(startIndex!, offsetBy: 97)
                 let resultStringForAuthor = str3?.substring(from: subIndex)
-                let stringRemoveAuthor = str3?.removeSubrange(subIndex..<endIndex!)
                 let resultStringForOneDaySentence = str3?.trimmingCharacters(in: .whitespacesAndNewlines)
                 DispatchQueue.main.async { [self] in
                     sentenceLabel.text =  resultStringForOneDaySentence
@@ -269,7 +272,12 @@ extension MainViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableview.frame.size.height / 10
+        if UIDevice.current.orientation.isLandscape{
+            return tableview.frame.size.height / 4
+        }else{
+            return tableview.frame.size.height / 10
+        }
+        
     }
     // 各 cell 是否可以進入編輯狀態 及 左滑刪除
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

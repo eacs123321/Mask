@@ -40,7 +40,6 @@ class NetworkManager : NSObject{
                     } catch {
                         print(error)
                     }
-                    
                 } else {
                     print("error")
                 }

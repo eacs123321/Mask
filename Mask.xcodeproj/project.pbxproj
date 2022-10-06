@@ -31,6 +31,7 @@
 		9BC230A228ED2263004EF017 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC230A028ED2263004EF017 /* TableViewCell.swift */; };
 		9BC230A328ED2263004EF017 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC230A128ED2263004EF017 /* TableViewCell.xib */; };
 		9BC230A928ED88EE004EF017 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC230A828ED88EE004EF017 /* Alert.swift */; };
+		9BF1187B28EEA17D005E608A /* Mask_ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF1187A28EEA17D005E608A /* Mask_ModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9BC230A028ED2263004EF017 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9BC230A128ED2263004EF017 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		9BC230A828ED88EE004EF017 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		9BF1187A28EEA17D005E608A /* Mask_ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mask_ModelTests.swift; sourceTree = "<group>"; };
 		B56EC385FFC883E70363FFF4 /* Pods-MaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaskTests.debug.xcconfig"; path = "Target Support Files/Pods-MaskTests/Pods-MaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A56249D8E9B651CE02AC91 /* Pods-Mask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mask.debug.xcconfig"; path = "Target Support Files/Pods-Mask/Pods-Mask.debug.xcconfig"; sourceTree = "<group>"; };
 		DE45A5D3F42FD3B7CA69DA7E /* Pods_MaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 		9BC2306D28EC965E004EF017 /* MaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				9BF1187A28EEA17D005E608A /* Mask_ModelTests.swift */,
 				9BC2306E28EC965E004EF017 /* MaskTests.swift */,
 			);
 			path = MaskTests;
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC2306F28EC965E004EF017 /* MaskTests.swift in Sources */,
+				9BF1187B28EEA17D005E608A /* Mask_ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +675,7 @@
 				INFOPLIST_FILE = Mask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -699,6 +704,7 @@
 				INFOPLIST_FILE = Mask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
